@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const activities = await response.json();
 
       activitiesList.innerHTML = "";
+      activitySelect.innerHTML = '<option value="">-- Select an activity --</option>';
 
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
